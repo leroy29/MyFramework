@@ -7,11 +7,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Homepage {
     private WebDriver driver;
-    
-    @FindBy(id="NewsletterPopup-newsletter-popup")
+
+    @FindBy(id = "NewsletterPopup-newsletter-popup")
     public WebElement newsLetterPopup;
+
+    @FindBy(xpath = "//a[@href='/search']")
+    public WebElement search;
     
-    private Homepage(WebDriver driver) {
+    @FindBy(xpath = "//input[@placeholder='Search our store']")
+    public WebElement searchInput;
+    
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement submit;
+
+    public Homepage(WebDriver driver) {
 	this.driver = driver;
 	PageFactory.initElements(driver, this);
     }
