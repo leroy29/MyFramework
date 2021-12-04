@@ -39,7 +39,7 @@ public class Tests {
     }
     
     @Test
-    public void assertPopupPresent() {
+    public void assertTitle() {
 	Assert.assertEquals(driver.getTitle(), "Petstore.com");
     }
     
@@ -57,5 +57,4 @@ public class Tests {
 	SearchResults searchResults = new SearchResults(driver);
 	Assert.assertTrue(searchResults.firstSearchResult.isDisplayed());
     }
-
 }
